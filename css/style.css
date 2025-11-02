@@ -1,0 +1,15 @@
+/* This file contains the custom CSS rules that were
+  previously in the <head> of your index.html file.
+*/
+
+/* A simple style for the body to ensure the font is applied */
+body {
+    font-family: 'Inter', sans-serif;
+    /* Applying the dark background to the whole page */
+    background-color: #0a192f; 
+}
+
+/* This applies the elegant serif font to all headings */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+}

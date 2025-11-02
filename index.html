@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- EDIT: Updated Title -->
+    <title>Astro Neeraj Sharma</title>
+    
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Load Inter font (still good, but also adding a more elegant serif font for headings) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Link to your new external stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script>
+        // Configuration for Tailwind CSS
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'], // Added an elegant font for titles
+                    },
+                    colors: {
+                        'brand-deep-blue': '#0a192f', // A deep, celestial navy
+                        'brand-gold': '#d4af37',     // A classic gold accent
+                        'brand-light-gray': '#b0c4de', // A soft, starry light gray
+                    }
+                },
+            },
+        }
+    </script>
+    <!-- 
+      I have moved the custom <style> rules to the new 'css/style.css' file.
+      This keeps your HTML file clean.
+    -->
+</head>
+<body class="bg-brand-deep-blue text-brand-light-gray antialiased">
+
+    <!-- Header & Navigation Bar -->
+    <nav class="bg-brand-deep-blue/70 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-brand-gold/20">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Business Name/Logo -->
+                <div class="flex-shrink-0">
+                    <a href="#" class="text-2xl font-bold text-white font-serif">
+                        <!-- EDIT: Replace with your father's business name -->
+                        Astro Neeraj Sharma
+                    </a>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden sm:flex sm:space-x-8">
+                    <a href="#about" class="text-brand-light-gray hover:text-brand-gold inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+                    <a href="#services" class="text-brand-light-gray hover:text-brand-gold inline-flex items-center px-1 pt-1 text-sm font-medium">Services</a>
+                    <a href="#contact" class="text-brand-light-gray hover:text-brand-gold inline-flex items-center px-1 pt-1 text-sm font-medium">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="bg-brand-deep-blue relative overflow-hidden">
+        <!-- Optional: subtle star-like background effect -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 20px 20px;"></div>
+
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-24 md:py-32 text-center relative z-10">
+            <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+                <!-- EDIT: Main headline -->
+                Guiding Your Path With the Stars
+            </h1>
+            <p class="mt-6 text-lg md:text-xl text-brand-light-gray max-w-3xl mx-auto">
+                <!-- EDIT: A brief one-sentence description of the business -->
+                Expert in Vedic Astrology, vastu, Numerology, and Personalized Horoscopes.
+            </p>
+            <a href="#contact" class="mt-8 inline-block bg-brand-gold text-brand-deep-blue font-medium py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-500 transition duration-300">
+                Book a Consultation
+            </a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 md:py-28 bg-brand-deep-blue/80 backdrop-blur-sm">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- About Image -->
+                <div>
+                    <!-- 
+                      EDIT: Replace this placeholder. 
+                      You can now add your photo to the 'assets/images' folder (e.g., 'father-photo.jpg')
+                      and change the src to: src="assets/images/father-photo.jpg"
+                    -->
+                    <img src="https://placehold.co/600x400/1e293b/b0c4de?text=Photo+of+Astrologer" 
+                         alt="A professional headshot of the astrologer" 
+                         class="rounded-lg shadow-xl w-full h-auto object-cover aspect-video border-4 border-brand-gold/30">
+                </div>
+                
+                <!-- About Text -->
+                <div class="md:pl-8">
+                    <h2 class="text-3xl font-bold text-white">About [Your Father's Name]</h2>
+                    <p class="mt-4 text-lg text-brand-light-gray">
+                        <!-- EDIT: Write a paragraph about your father's background, mission, or business history. -->
+                        Welcome! I'm [Your Father's Name], an astrologer based in [Location]. 
+                        With a passion for celestial wisdom and a commitment to genuine guidance, I've spent the last [X] years 
+                        helping clients find clarity and navigate their life's journey.
+                    </p>
+                    <p class="mt-4 text-lg text-brand-light-gray">
+                        <!-- EDIT: Add another paragraph if needed. -->
+                        My practice is built on a foundation of ancient knowledge and intuitive understanding. 
+                        I believe in empowering you with insights to make informed decisions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 md:py-28 bg-brand-deep-blue">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-white">My Services</h2>
+                <p class="mt-4 text-lg text-brand-light-gray max-w-2xl mx-auto">
+                    <!-- EDIT: A brief intro to the services -->
+                    Discover the insights the universe holds for you.
+                </p>
+            </div>
+            
+            <!-- Service Cards -->
+            <div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Service Card 1 -->
+                <div class="bg-brand-deep-blue/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-brand-gold/30 transition-all duration-300 hover:shadow-brand-gold/20 hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-brand-gold">
+                        <!-- EDIT: Service 1 Title -->
+                        Vedic Astrology Reading
+                    </h3>
+                    <p class="mt-4 text-brand-light-gray">
+                        <!-- EDIT: Service 1 Description -->
+                        An in-depth analysis of your birth chart to understand your life's purpose, challenges, and opportunities.
+                    </p>
+                </div>
+                
+                <!-- Service Card 2 -->
+                <div class="bg-brand-deep-blue/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-brand-gold/30 transition-all duration-300 hover:shadow-brand-gold/20 hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-brand-gold">
+                        <!-- EDIT: Service 2 Title -->
+                        Tarot Card Reading
+                    </h3>
+                    <p class="mt-4 text-brand-light-gray">
+                        <!-- EDIT: Service 2 Description -->
+                        Gain clarity on specific questions or life situations through the intuitive wisdom of the tarot.
+                    </p>
+                </div>
+                
+                <!-- Service Card 3 -->
+                <div class="bg-brand-deep-blue/50 backdrop-blur-sm p-8 rounded-lg shadow-lg border border-brand-gold/30 transition-all duration-300 hover:shadow-brand-gold/20 hover:shadow-2xl">
+                    <h3 class="text-2xl font-bold text-brand-gold">
+                        <!-- EDIT: Service 3 Title -->
+                        Horoscope Matching
+                    </h3>
+                    <p class="mt-4 text-brand-light-gray">
+                        <!-- EDIT: Service 3 Description -->
+                        Understand relationship compatibility for marriage or business partnerships through detailed chart comparison.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 md:py-28 bg-brand-gold text-brand-deep-blue">
+        <div class="container mx-auto max-w-3xl px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold">Begin Your Journey</h2>
+            <p class="mt-4 text-lg md:text-xl text-gray-800">
+                <!-- EDIT: Call to action message -->
+                Ready to find clarity? Reach out to schedule your consultation.
+            </p>
+            
+            <div class="mt-8">
+                <p class="text-xl font-medium">
+                    <!-- EDIT: Add your father's email -->
+                    Email: <a href="mailto:email@example.com" class="underline hover:text-gray-900">email@example.com</a>
+                </p>
+                <p class="mt-2 text-xl font-medium">
+                    <!-- EDIT: Add your father's phone number (optional) -->
+                    Phone: [Your Phone Number]
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-8 text-center">
+            <p class="text-sm">
+                <!-- EDIT: Update the year and name -->
+                &copy; 2025 Astrologer [Your Father's Name]. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
+
